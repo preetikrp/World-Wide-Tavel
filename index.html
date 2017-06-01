@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World-Tour-Guide</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css/main.css">
+
+<body ng-app="travelguide">
+    <h1>Travel Guide</h1>
+    <!-- ng-controller  look for the controller name -->
+   <div ng-controller="bookCtrl">
+        <h1>Guide</h1>
+        <input type="text" ng-model="searchList" placeholder="Preeti type here" />
+        <ul>
+        <!-- ng-repeat it repeats all the collection from firebase -->
+        <!-- filter , it filters whatever we type -->
+            <li ng-repeat="book in books | filter : searchList" class="liststyle">
+                <div class="title">Title: {{book.title}}</div>
+                <div> Book Type: {{book.type}}</div>
+                <div class="blink"> Price: {{book.price}}</div>
+            </li>
+        </ul>
+    </div>
+    <script src="/lib/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/bookCtrl.js"></script>
+    </div>
+</body>
+
+</html>

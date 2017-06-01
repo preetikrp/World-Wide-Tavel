@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-color: #bbff00;
+}
+
+.liststyle {
+    list-style: none;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1em;
+}
